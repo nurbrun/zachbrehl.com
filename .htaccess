@@ -1,0 +1,14 @@
+# Protect .htaccess
+<files .htaccess>
+order allow,deny
+deny from all
+</files>
+
+Options +FollowSymLinks 
+Options +Indexes
+RewriteEngine On
+
+# Remove .php but still allow addressing .php
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.html

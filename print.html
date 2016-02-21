@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Zach Brehl - a professioanl automotive photographer in Toronto.">
+    <meta name="author" content="nurbrun">
+
+    <title>Zach Brehl Automotive Photography</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- Font Awesome -->
+<!--     <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+ --><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+      <!-- Plugin CSS -->
+
+    
+    <link href="assets/css/theme.css" rel="stylesheet" type="text/css">
+    <!-- IE8 support for HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="http://faviconist.com/icons/e3932c14d49489917463ba3571642b0e/favicon.ico" />
+</head>
+
+<style>
+
+.banner-image{
+    /*background-position: 0% 422%;*/
+    /*background-position: 75% 425%;*/
+    background-attachment: inherit;
+    /*height: 90%;*/
+    /*background-position: 0% 80%;*/
+    position: relative;
+    top: 106px;
+}
+
+
+#portfolio-container {
+    float: left;
+    margin-bottom: 3px;
+    margin-top: 2px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.portfolio-image-wrap {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: -2px;
+    margin-left: -2px;
+    margin-right: -2px;
+    margin-top: -2px;
+}
+
+.portfolio-image {
+    /*border:1px solid white;*/
+    border-left: 1px solid white;
+    /*border-right: 1px solid white;*/
+    /*border-bottom: 1px solid white;*/
+    border-top: 1px solid white;
+    height: auto;
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    }
+
+#recent {
+    padding: 0px 0 !important;
+}
+
+.recent-section{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.navbar-right{
+    right: 33%;
+    /*right: 29%;*/
+    /*right: 35%;*/
+    position: relative;
+    top: 30px;
+}
+
+.zb-logo{
+    /*position: relative;*/
+    top: 0px;
+    font-weight: 100 !important;
+    font-size: 28px;
+    left: -120px;
+    letter-spacing: 2px;
+    /*position: relative;
+    top: 191px;
+    font-weight: 100 !important;
+    font-size: 28px;
+    left: -66px;
+    letter-spacing: 2px;*/
+    /*font-family: Helvetica Neue, sans-serif*/
+    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.zb-nav-links{
+    color: black !important;
+}
+}
+
+.portfolio-image-wrap:hover{
+    opacity: 0.6;
+}
+
+/*.header-bg{
+
+
+
+    background-color: rgba(25, 25, 25, 0.80);
+    height: 78px;
+    border-radius: 3px;
+    padding: 40px;
+    border: solid 1px rgba(255, 255, 255, 0.73);
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+.header-bg {
+    /* width: 25%; */
+    background-color: rgba(25, 25, 25, 0.80);
+    height: 60px;
+    border-radius: 3px;
+    padding: 30px;
+    border: solid 1px rgba(255, 255, 255, 0.73);
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.zb-logo-font{
+    /*position: relative;
+    left: 10px;
+    top: -45px;
+    font-size: 30px;
+    line-height: 29px;
+    text-align: center;*/
+    position: relative;
+    left: 10px;
+    top: -40px;
+    font-size: 23px;
+    line-height: 29px;
+    text-align: center;
+}
+
+.zb-photo{
+    /*font-size: 25px;*/
+    /*font-size: 15px;
+    border-top: solid 1px;
+    position: relative;
+    top: -5px;
+    padding-top: 2px;*/
+
+        font-size: 10px;
+    border-top: solid 1px;
+    position: relative;
+    top: -9px;
+    padding-top: 4px;
+}
+
+.navbar-default .navbar-nav li a, .navbar-inverse .navbar-nav li a{
+    letter-spacing: 6.5px;
+    font-size: 25px;
+    border-right: solid white 1px;
+}
+
+.navbar-expanded .navbar-nav li a{
+    border-right: solid black 1px;
+}
+
+.navbar-custom{
+    padding-top: 10px !important;
+    padding-bottom: 5px !important; 
+}
+
+.navbar-inverse{
+    background-color: rgba(34, 34, 34, 0.97);
+}
+
+/*.zb-nav-links{
+    color:white;
+}*/
+    
+/*.navbar-expanded .navbar-right a{
+    color:black !important;
+}*/
+
+.navbar-nav>li>a{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.portfolio-image:hover{
+    /*display: none;*/
+        -webkit-filter: grayscale(100%);
+
+
+        /*-webkit-filter: blur(1px);*/
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+/*.portfolio-image-wrap:hover{
+
+        
+        overflow: hidden;
+}*/
+
+.modal-image{
+    width: 100%;
+}
+.modal-body {
+    padding: 2px !important;
+}
+@media (min-width: 768px){}
+.modal-dialog {
+    width: 80vw;
+    width:75vw;
+    /*margin-top: 6%;*/
+    }
+}
+
+.navbar-inverse.navbar-expanded{
+        /*background: rgba(34, 34, 34, 0.97) !important;*/
+}
+
+.contact-background{
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    /*margin-top: 200px;*/
+    border:solid white 1px;
+    padding: 30px;
+    padding-top:0px; 
+
+
+}
+
+.about-row{
+    margin-top: 25px;
+}
+.introduction-text{
+    text-transform: inherit;
+    color: black;
+    -webkit-font-smoothing:antialiased;
+    font-size: 17px;
+    letter-spacing: 0px;
+}
+.about-list{
+    color: black;
+    -webkit-font-smoothing:antialiased;
+    margin-top: 3px;
+
+}
+
+.zb-heading{
+    color: black;
+    color: rgba(0, 0, 0, 0.92);
+    color:#75838E;
+    color: #737B82;
+    font-size: 40px;
+    font-family: Helvetica Neue, sans-serif;
+    letter-spacing: 1.9px;
+}
+
+h1 {
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.head-container{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-heading, .services{
+    /*text-align: center;*/
+    color: black;
+    margin-top: 20px;
+    margin-top: 10px;
+    font-size: 28px;
+}
+
+.contact-links{
+    color: black;
+    -webkit-font-smoothing:antialiased;
+    color: #646C73;
+}
+
+.banner-image{
+   
+    background-attachment: inherit;
+    /*background-position: -7% 83% !important;*/
+    position: relative;
+    top: 0px;
+    width: 100%;
+    margin: auto;
+    /*height: 90%;*/
+}
+
+
+.zb-name{
+    color: #22659D;
+    color: #145C95;
+    color: #75838E;
+    color: black;
+}
+
+.navbar{
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    background-color: rgba(34, 34, 34, 0);   
+    border:none;
+}
+
+a{
+    color: black;
+}
+
+.fa{
+    color: #22659D;
+    color: #646C73;
+    font-size: 40px;
+    font-size: 37px;
+    margin-top: 20px;
+    margin-right: 15px;
+}
+
+.fa:hover{
+   color: #22659D; 
+}
+
+.bold-contact:hover{
+    color: #22659D;
+    font-weight: 500;
+}
+
+.contact-text{
+    vertical-align: super;
+}
+
+.contact-background ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+.contact-background li { 
+    padding-left: 1em; 
+    text-indent: -.7em;
+}
+
+.contact-background li:before {
+    content: "• ";
+    color: #7D7D7D;
+    padding-right: 5px;
+}
+
+.trust{
+    background-image: url('images/trust.png');
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.88);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 85%;
+    background-position: 50% 50%;
+    margin-top: 40px;
+
+}
+
+.worked-with{
+    text-align: center;
+    margin-top: 20px;
+    font-family: Helvetica Neue, sans-serif;
+}
+
+.navbar {
+    z-index: 99;
+    position: absolute !important;
+    width: 100%;
+}
+
+.banner-image{
+    background-size: cover;
+    width: 100%;
+}
+
+.modal-dialog{
+        margin-top: 2%;
+    }
+
+
+.services{
+    /*margin-bottom: 18px;*/
+    /*font-size: 21px;*/
+}
+
+.fa {
+    margin-top: 0px;
+}
+
+.bold-contact{
+    font-weight: 400;
+    color: #646C73;
+}
+
+.head-container {
+    text-align: center;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.zb-heading {
+    color: black;
+    color: rgba(0, 0, 0, 0.92);
+    font-size: 24px;
+    color: white;
+    line-height: 40px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.portfolio-link {
+    color: #22659D;
+}
+
+.portfolio-link:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 768px){
+.modal-dialog {
+    width: 80vw;
+    width:75vw;
+    /*margin-top: 6%;*/
+    }
+}
+
+
+@media (max-width: 1244px) and (min-width: 651px){
+    .banner-image{
+        /*background-size: contain;*/
+        /*background-position: 0% 0%;*/
+
+    }
+    header {
+        max-height: 575px !important;
+        max-height: 625px !important;
+    }
+}
+
+@media (min-width: 1245px){
+    .banner-image{
+        background-position: 0% 35%;
+    }
+    .head-container{
+        background-color: rgba(0,0,0,0.5);
+    padding-top: 10px;
+    }
+}
+
+@media (max-width: 767px){
+    .navbar{
+        position: initial !important;
+        margin-bottom: 0px;
+    }
+    .header-bg{
+        width: 234px;
+    }
+    .navbar-toggle{
+        margin-top: 25px;
+        margin-right: 10px;
+    }
+    .navbar-right{
+        position: initial;
+    }
+    .navbar-inverse .navbar-brand{
+        padding: 15px 7.5px !important;
+    }
+}
+
+@media (max-width: 650px){
+    header {
+        max-height: 325px !important;
+    }
+
+}
+
+@media (max-width: 1350px){
+    .navbar-right{
+        right: 28%;
+    }
+    .navbar-default .navbar-nav li a, .navbar-inverse .navbar-nav li a{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1250px){
+    .navbar-right{
+        right: 27%;
+    }
+}
+
+@media (max-width: 1150px){
+    .navbar-right{
+        right: 25%;
+    }
+}
+
+@media (max-width: 1050px){
+    .navbar-right{
+        right: 24%;
+    }
+}
+
+@media (max-width: 970px){
+    .navbar-right{
+        right: 22%;
+    }
+    .navbar-default .navbar-nav li a, .navbar-inverse .navbar-nav li a{
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 925px){
+    .navbar-right{
+        right: 19%;
+    }
+}
+
+@media (max-width: 860px){
+    .navbar-default .navbar-nav li a, .navbar-inverse .navbar-nav li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 810px){
+    .navbar-right{
+        right: 17%;
+    }
+}
+
+@media (max-width: 785px){
+    .navbar-right{
+        right: 13%;
+    }
+}
+
+@media (max-width: 767px){
+    .web-nav{
+        display: none;
+    }
+    .zb-nav-links{
+        text-align: center;
+        font-weight: 100;
+        margin: 10px;
+        color: white !important;
+    }
+    .modal-dialog{
+        margin-top: 50%;
+    }
+    .navbar{
+    background-color: rgba(34, 34, 34, 1);   
+    }
+    .navbar-default .navbar-nav li a, .navbar-inverse .navbar-nav li a{
+    border-right: none;
+    }
+    .zb-heading{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 19px;
+    }
+    .worked-with{
+        font-size: 22px;
+    }
+    .print-heading{
+        font-size:35px;
+    }
+
+}
+@media (min-width: 768px){
+    .mobile-nav{
+        display: none;
+    }
+    .print-heading{
+        display: none;   
+    }
+}
+
+@media (max-width: 500px){
+    .contact-links{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px){
+    .contact-links{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1244px){
+    .zb-heading {
+        color:#75838E;
+    color: #737B82;
+    }
+    .head-container{
+        position: initial;
+    }
+    .banner-image{
+        height: 90%;
+    }
+}
+
+/*from zb main*/
+
+
+</style>
+<script src="assets/js/jquery.js"></script>
+<script>
+
+
+function first_load(){
+
+// IMAGE SIZING ON PAGE LOAD
+
+var fullpagewidth1 = $(window).width();
+var pagewidth1 = fullpagewidth1 - 0;
+var columns5 = pagewidth1 / 5;
+var columns3 = pagewidth1 / 3 - 1;
+if (pagewidth1 <= 768) {
+    if (pagewidth1 > 320) {
+        $('.portfolio-image-wrap, .portfolio-image').css('width', columns3);
+    } else if (pagewidth1 <= 320) {
+        $('.portfolio-image-wrap, .portfolio-image').css('width', '320px');
+    } else {
+        // do nothing
+    }
+} else {
+    $('.portfolio-image-wrap, .portfolio-image').css('width', columns5);
+}
+
+}
+
+
+
+    // IMAGE LOADING CODE
+
+// var imgArray = [];
+  jQuery.ajax({
+  url: '/scripts/test.php'
+}).done(function(data) {
+   imgArray = jQuery.parseJSON(data).cat1;
+
+//    for (var i=0; i< imgArray.length; i++)
+// {
+//     var tempHTML = '<span class="portfolio-image-wrap"><div id='+i+'><a title="'+imgArray[i].headline+' Car Photography"></a><h3>'+imgArray[i].headline+'</h3></div><img alt="'+imgArray[i].headline+' Car Photography" onload="first_load()" class="portfolio-image" src="'+imgArray[i].path+'" /></span>';
+//     jQuery('#portfolio-container').append(tempHTML);
+// }
+
+$('.portfolio-image-wrap div').click(function() {
+    $('.portfolio-screen').show();
+    var width = $(window).width();
+    var height = $(window).height();
+    var height2 = height.toString() - 50;
+    var width2 = width.toString() - 50;
+    var ratio = width / height
+
+    var index = parseInt($(this).attr('id'));
+
+    _currentIndex = index;
+
+    var imagesrc = imgArray[index].path;//$(this).next().attr('src');
+    
+
+    $('.portfolio-holder-inner').append('<img src="'+imagesrc+'" />');
+    if (ratio > 1.5) {
+        $('.portfolio-holder-inner img').css('max-height', height2);
+        $('.portfolio-holder-inner img').css('width', 'auto');
+        $('.portfolio-holder-inner').css('max-width', 'auto');
+            setTimeout(function() {
+                var newwidth = $('.portfolio-holder-inner img').width();
+                $('.portfolio-holder-inner').css('max-width', newwidth);
+            }, 50);
+    } else {
+        $('.portfolio-holder-inner').css('max-width', width2);
+        $('.portfolio-holder-inner').css('max-height', height2);
+        $('.portfolio-holder-inner').css('z-index', '4');
+    }
+    $('#copyright').css('z-index','1');
+    var src = $('.portfolio-holder-inner img')[0].src;
+    var number = parseInt(src.substring(src.lastIndexOf('/')+1, src.length-4));
+    var total = $('.portfolio-image').length;
+    $('.counter-number').text(_currentIndex + 1);
+    $('.counter-total').text(total);
+    if (number == 1) {
+        $('.prev-holder').hide();
+    } else {
+        $('.prev-holder').show();
+    }
+    if (number == total) {
+        $('.next-holder').hide();
+    } else {
+        $('.next-holder').show();
+    }
+    $('.portfolio-holder').fadeIn(600);
+});
+
+});
+
+
+// PORTFOLIO WINDOW RESIZE
+
+$(window).resize(function() {
+    var pagewidth = $(window).width();
+    var columns5 = pagewidth / 5;
+    var columns3 = pagewidth / 3 - 1;
+    if (pagewidth <= 768) {
+        if (pagewidth > 320) {
+            $('.portfolio-image-wrap, .portfolio-image').css('width', columns3);
+        } else if (pagewidth <= 320) {
+            $('.portfolio-image-wrap, .portfolio-image').css('width', '320px');
+        } else {
+            // do nothing
+        }
+    } else {
+        $('.portfolio-image-wrap, .portfolio-image').css('width', columns5);
+    }
+});
+
+    </script>
+
+
+
+
+
+<body id="page-top">
+    <nav class="navbar navbar-inverse navbar-expanded navbar-custom">
+    <!-- <nav class="navbar navbar-default navbar-fixed-top navbar-custom"> -->
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="header-bg zb-logo">
+                <a class="navbar-brand page-scroll zb-logo-font" href="index.html" style="">
+                    <!-- <img src="assets/img/logo.png" class="img-responsive" alt=""> -->
+                    Zach Brehl<br> <span class="zb-photo">Automotive Photography</span>
+                </a>
+                </div> 
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll zb-nav-links" href="index.html#recent">Portfolio</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll zb-nav-links" href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll zb-nav-links" href="#work" style="border-right:none;">Prints</a>
+                    </li>
+                    <!-- <li>
+                        <a class="page-scroll zb-nav-links" href="#contact">Contact</a>
+                    </li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <header class="banner-image" style="background-image: url('images/print.jpg');">
+
+    
+        
+     <!--    <div class="scroll-down">
+            <a class="btn page-scroll" href="#about"><i class="fa fa-angle-double-down fa-fw"></i></a>
+        </div> -->
+        
+        
+
+        
+    
+
+    </header>
+
+    <div class="head-container">
+            <h1 class="print-heading">Prints</h1>
+            <h1 class="zb-heading">If you’re interested in a physical print or canvas of any of the photos found on my <a class="portfolio-link" href="../#recent">portfolio</a> page please feel free to <a class="portfolio-link" href="about.html">contact me.</a></h1>
+    </div>
+
+    
+    <!-- <h1 class="worked-with">Recently Worked with:</h1>
+
+   <div class="trust"></div> -->
+
+
+        <!-- <footer class="footer" style="background-color: #E0e0e0;">
+        <div id="contact" class="container text-center">
+           
+            <h2 class="footer-header-font">Contact</h2>
+            <hr class=" colored">
+
+        
+
+            <div class="col-sm-12" style="padding-top:15vh;">
+                <p style="text-transform: capitalize; ">Call me at 647.292.3262</p>
+                <p style="text-transform: capitalize;">Email me at <span style="text-transform:lowercase;">bruno.alfano.rizzo@gmail.com</span></p>
+            </div>
+            <div class="col-sm-12" style="padding-top:10vh;">
+                <a href="tel:+16472923262" class="yellow-background-small"><i class="fa fa-phone" style="padding-left: 3px;"></i> Call</a>
+                <a href="mailto:bruno.alfano.rizzo@gmail.com"><span class="yellow-background-small"><i class="fa fa-envelope" style="padding-left: 3px;"></i> Email</span></a>
+            </div>
+
+            <div class="col-sm-12 social" style=" padding-top:18vh; ">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li><a href="agency.html#"><i class="fa fa-facebook fa-fw fa-2x"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/nurbrun" target="_blank"><i class="fa fa-instagram fa-fw fa-2x"></i></a>
+                        </li>
+
+                        <li><a href="https://ca.linkedin.com/pub/bruno-alfano-rizzo/37/629/205" target="_blank"><i class="fa fa-linkedin fa-fw fa-2x"></i></a>
+                        </li>
+
+                        <li><a href="https://www.github.com/nurbrun" target="_blank"><i class="fa fa-github fa-fw fa-2x"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            
+            <div class="col-sm-12 copyright">
+                <div class="col-lg-12">
+                    <p class="small">&copy; 2015 Nurbrun</p>
+                </div>
+            </div>
+            </div>
+</div>
+    
+    </footer> -->
+
+    <!-- Core Scripts -->
+    
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <!-- Plugin Scripts -->
+    <script src="assets/js/plugins/jquery.easing.min.js"></script>
+    <script src="assets/js/plugins/classie.js"></script>
+    <script src="assets/js/plugins/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/plugins/background/core.js"></script>
+    <script src="assets/js/plugins/background/transition.js"></script>
+    <script src="assets/js/plugins/background/background.js"></script>
+    <script src="assets/js/plugins/jquery.mixitup.js"></script>
+    <script src="assets/js/plugins/wow/wow.min.js"></script>
+    <script src="assets/js/plugins/jqBootstrapValidation.js"></script>
+    <!-- Theme Scripts -->
+    <script src="assets/js/nurbrun.js"></script>
+
+
+
+    <script type="text/javascript">
+
+    $('.portfolio-image').click(function(){
+        
+        old_src = this.src
+        old_img = old_src.split('/').pop();
+        modal_src = "images/large/"+ old_img 
+        $('.modal-image').attr('src',modal_src);
+        $('#myModal').modal('show');
+
+    })
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ++++++ GOOGLE ANALYTICS ++++++ -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-64695934-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript">
+        // Smooth Scrolling: Smooth scrolls to an ID on the current page.
+        // To use this feature, add a link on your page that links to an ID, and add the .page-scroll class to the link itself. See the docs for more details.
+        $('a.page-scroll').bind('click', function(event) {
+            var $anchor = $(this);
+            $('html, body').stop().animate({
+                scrollTop: ($($anchor.attr('href')).offset().top - 107)
+            }, 1250, 'easeInOutExpo');
+            event.preventDefault();
+        });
+    </script>
+
+</body>
+
+</html>

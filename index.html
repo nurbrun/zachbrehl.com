@@ -1,0 +1,1269 @@
+<!-- To do still
+
+-click portfolio from mobile view does not work
+portfolio button from
+-replace about image with better quality 
+ -->
+
+ <!-- webbbbb -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <meta name="description" content="Zach Brehl - a professioanl automotive photographer in Toronto.">
+        <meta name="author" content="nurbrun">
+
+        <title>Zach Brehl Automotive Photography</title>
+        <!-- Bootstrap Core CSS -->
+        <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
+          <!-- Plugin CSS -->
+        <link href="assets/css/theme.css" rel="stylesheet" type="text/css">
+        <!-- IE8 support for HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="http://faviconist.com/icons/e3932c14d49489917463ba3571642b0e/favicon.ico" />
+    </head>
+    <style>
+
+    .banner-image{
+        background-attachment: inherit;
+        height: 90%;
+        z-index: 0;
+    }
+
+    #portfolio-container {
+        float: left;
+        margin-bottom: 3px;
+        margin-top: 2px;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .portfolio-image-wrap {
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: -2px;
+        margin-left: -2px;
+        margin-right: -2px;
+        margin-top: -2px;
+    }
+
+    .portfolio-image {
+        border-left: 1px solid white;
+        border-top: 1px solid white;
+        height: auto;
+        opacity: 1;
+        position: relative;
+        z-index: 2;
+        transition: all 0.5s ease 0s;
+        -moz-transition: all 0.5s ease 0s;
+        -webkit-transition: all 0.5s ease 0s;
+        -o-transition: all 0.5s ease 0s;
+        }
+
+    #recent {
+        padding: 0px 0 !important;
+    }
+
+    .recent-section{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .navbar-right{
+        right: 29%;
+        position: relative !important;
+        top: 30px;
+    }
+
+    .zb-logo{
+        /*position: relative;*/
+        top: 0px;
+        font-weight: 100 !important;
+        font-size: 28px;
+        left: -120px;
+        letter-spacing: 2px;
+        font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+
+    .zb-nav-links{
+        color: black !important;
+    }
+    }
+
+    .portfolio-image-wrap:hover{
+        opacity: 0.6;
+    }
+
+    .header-bg {
+        /* width: 25%; */
+        background-color: rgba(25, 25, 25, 0.80);
+        height: 60px;
+        border-radius: 3px;
+        padding: 30px;
+        border: solid 1px rgba(255, 255, 255, 0.73);
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .zb-logo-font{
+        position: relative;
+        left: 10px;
+        top: -40px;
+        font-size: 23px;
+        line-height: 29px;
+        text-align: center;
+    }
+
+    .zb-photo{
+        font-size: 10px;
+        border-top: solid 1px;
+        position: relative;
+        top: -9px;
+        padding-top: 4px;
+    }
+
+    .navbar-default .navbar-nav li a, .navbar-inverse .navbar-nav li a{
+        letter-spacing: 6.5px;
+        font-size: 25px;
+        border-right: solid white 1px;
+    }
+
+    .navbar-expanded .navbar-nav li a{
+        border-right: solid black 1px;
+    }
+
+    .navbar-custom{
+        padding-top: 10px !important;
+        padding-bottom: 5px !important; 
+    }
+
+    .navbar-inverse{
+        background-color: rgba(34, 34, 34, 0.97);
+    }
+
+    .zb-nav-links{
+        color:white !important;
+    }
+        
+    .navbar-expanded .navbar-right a{
+        color:black !important;
+    }
+
+    .navbar-nav>li>a{
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    .portfolio-image:hover{
+        -webkit-filter: grayscale(100%);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+    }
+
+    .modal-image{
+        width: 100%;
+    }
+    .modal-body {
+        padding: 2px !important;
+    }
+
+    .navbar {
+        z-index: 99;
+        position: absolute !important;
+        width: 100%;
+    }
+
+    .banner-image{
+        background-size: cover;
+        width: 100%;
+    }
+
+    .modal-dialog{
+            margin-top: 2%;
+        }
+
+    @media (min-width: 768px){
+    .modal-dialog {
+        width: 80vw;
+        width:75vw;
+        /*margin-top: 6%;*/
+        }
+    }
+
+    @media (max-width: 1244px) and (min-width: 651px){
+        .banner-image{
+            /*background-size: contain;*/
+            /*background-position: 0% 0%;*/
+
+        }
+        header {
+            max-height: 575px !important;
+            max-height: 625px !important;
+        }
+    }
+
+    @media (min-width: 1245px){
+        .banner-image{
+            background-position: 0% 80%;
+        }
+    }
+
+    @media (max-width: 767px){
+        .navbar{
+            position: initial !important;
+            margin-bottom: 0px;
+        }
+        .header-bg{
+            width: 234px;
+        }
+        .navbar-toggle{
+            margin-top: 25px;
+            margin-right: 10px;
+        }
+        .navbar-inverse .navbar-brand{
+            padding: 15px 7.5px !important;
+        }
+    }
+
+    @media (max-width: 650px){
+        header {
+            max-height: 325px !important;
+        }
+
+    }
+
+    @media (max-width: 1350px){
+        .navbar-right{
+            right: 28%;
+        }
+        .navbar-default .navbar-nav li a, .navbar-inverse .navbar-nav li a{
+            font-size: 22px;
+        }
+    }
+
+    @media (max-width: 1250px){
+        .navbar-right{
+            right: 27%;
+        }
+    }
+
+    @media (max-width: 1150px){
+        .navbar-right{
+            right: 25%;
+        }
+    }
+
+    @media (max-width: 1050px){
+        .navbar-right{
+            right: 24%;
+        }
+    }
+
+    @media (max-width: 970px){
+        .navbar-right{
+            right: 22%;
+        }
+        .navbar-default .navbar-nav li a, .navbar-inverse .navbar-nav li a{
+            font-size: 20px;
+        }
+    }
+
+
+    @media (max-width: 925px){
+        .navbar-right{
+            right: 19%;
+        }
+    }
+
+    @media (max-width: 860px){
+        .navbar-default .navbar-nav li a, .navbar-inverse .navbar-nav li a{
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 810px){
+        .navbar-right{
+            right: 17%;
+        }
+    }
+
+    @media (max-width: 785px){
+        .navbar-right{
+            right: 13%;
+        }
+    }
+
+    @media (max-width: 767px){
+        .web-nav{
+            display: none;
+        }
+        .zb-nav-links{
+            text-align: center;
+            font-weight: 100;
+            margin: 10px;
+        }
+        .modal-dialog{
+            margin-top: 50%;
+        }
+        .navbar-expanded .navbar-nav li a {
+            border-right: none;
+        }
+    }
+
+    @media (min-width: 768px){
+        .mobile-nav{
+            display: none;
+        }
+    }
+
+
+    @media (max-width: 767px) and (orientation:landscape) {
+        .modal-dialog{
+            margin-top: 0px !important;
+            width: 75%;
+            /*height: 75%;*/    
+            margin: 0 auto;
+            margin-top: 10px !important;
+        }
+        .modal-body { 
+            /*max-height: 350px; 
+            padding: 15px; */
+            /*overflow-y: auto; */
+            /*-webkit-overflow-scrolling: touch; */
+         }
+        /*.modal { position: absolute; } */
+        /*.modal-open{
+            overflow: hidden;
+        }*/
+        html body.modal-open {
+            overflow: hidden;
+            /*position: fixed;*/
+        }
+        body.modal-open {
+            overflow: hidden;
+            /*position: fixed;*/
+        }
+        body{
+            position: relative;
+        }
+    }
+
+    .modal {
+        text-align: center;
+    }
+
+
+    @media screen and (min-width: 768px) { 
+      .modal:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: " ";
+        height: 100%;
+      }
+    }
+
+    .modal-dialog {
+      display: inline-block;
+      text-align: left;
+      vertical-align: middle;
+    }
+    .modal-content{
+        border-radius: 2px;
+    }
+
+    </style>
+    <script src="assets/js/jquery.js"></script>
+    <script>
+
+        function first_load(){
+
+        // IMAGE SIZING ON PAGE LOAD
+
+        var fullpagewidth1 = $(window).width();
+        var pagewidth1 = fullpagewidth1 - 0;
+        var columns5 = pagewidth1 / 5;
+        var columns3 = pagewidth1 / 3 - 1;
+        if (pagewidth1 <= 768) {
+            if (pagewidth1 > 320) {
+                $('.portfolio-image-wrap, .portfolio-image').css('width', columns3);
+            } else if (pagewidth1 <= 320) {
+                $('.portfolio-image-wrap, .portfolio-image').css('width', '320px');
+            } else {
+                // do nothing
+            }
+        } else {
+            $('.portfolio-image-wrap, .portfolio-image').css('width', columns5);
+        }
+
+        }
+            // IMAGE LOADING CODE
+          jQuery.ajax({
+            url: '/scripts/test.php'
+          }).done(function(data) {
+           imgArray = jQuery.parseJSON(data).cat1;
+
+
+        $('.portfolio-image-wrap div').click(function() {
+            $('.portfolio-screen').show();
+            var width = $(window).width();
+            var height = $(window).height();
+            var height2 = height.toString() - 50;
+            var width2 = width.toString() - 50;
+            var ratio = width / height
+
+            var index = parseInt($(this).attr('id'));
+
+            _currentIndex = index;
+
+            var imagesrc = imgArray[index].path;//$(this).next().attr('src');
+            
+
+            $('.portfolio-holder-inner').append('<img src="'+imagesrc+'" />');
+            if (ratio > 1.5) {
+                $('.portfolio-holder-inner img').css('max-height', height2);
+                $('.portfolio-holder-inner img').css('width', 'auto');
+                $('.portfolio-holder-inner').css('max-width', 'auto');
+                    setTimeout(function() {
+                        var newwidth = $('.portfolio-holder-inner img').width();
+                        $('.portfolio-holder-inner').css('max-width', newwidth);
+                    }, 50);
+            } else {
+                $('.portfolio-holder-inner').css('max-width', width2);
+                $('.portfolio-holder-inner').css('max-height', height2);
+                $('.portfolio-holder-inner').css('z-index', '4');
+            }
+            $('#copyright').css('z-index','1');
+            var src = $('.portfolio-holder-inner img')[0].src;
+            var number = parseInt(src.substring(src.lastIndexOf('/')+1, src.length-4));
+            var total = $('.portfolio-image').length;
+            $('.counter-number').text(_currentIndex + 1);
+            $('.counter-total').text(total);
+            if (number == 1) {
+                $('.prev-holder').hide();
+            } else {
+                $('.prev-holder').show();
+            }
+            if (number == total) {
+                $('.next-holder').hide();
+            } else {
+                $('.next-holder').show();
+            }
+            $('.portfolio-holder').fadeIn(600);
+        });
+
+        });
+
+        // PORTFOLIO WINDOW RESIZE
+
+        $(window).resize(function() {
+            var pagewidth = $(window).width();
+            var columns5 = pagewidth / 5;
+            var columns3 = pagewidth / 3 - 1;
+            if (pagewidth <= 768) {
+                if (pagewidth > 320) {
+                    $('.portfolio-image-wrap, .portfolio-image').css('width', columns3);
+                } else if (pagewidth <= 320) {
+                    $('.portfolio-image-wrap, .portfolio-image').css('width', '320px');
+                } else {
+                    // do nothing
+                }
+            } else {
+                $('.portfolio-image-wrap, .portfolio-image').css('width', columns5);
+            }
+        });
+
+    </script>
+    <body id="page-top">
+        <nav class="navbar navbar-inverse navbar-expanded navbar-custom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="header-bg zb-logo">
+                    <a class="navbar-brand page-scroll zb-logo-font" href="#page-top" style="">
+                        Zach Brehl<br> <span class="zb-photo">Automotive Photography</span>
+                    </a>
+                    </div> 
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right web-nav">
+                        <li class="hidden">
+                            <a class="page-scroll" href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll-big zb-nav-links" href="#recent">Portfolio</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll zb-nav-links" href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll zb-nav-links" href="print.html" style="border-right:none;">Prints</a>
+                        </li>
+                        <!-- <li>
+                            <a class="page-scroll zb-nav-links" href="#contact">Contact</a>
+                        </li> -->
+                    </ul>
+                    <ul class="nav navbar-nav mobile-nav">
+                        <li class="hidden">
+                            <a class="page-scroll" href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll-small zb-nav-links" href="#recent">Portfolio</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll zb-nav-links" href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll zb-nav-links" href="print.html" style="border-right:none;">Prints</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+        <header class="banner-image" style="background-image: url('images/vent_cover_opt.jpg');">
+        </header>
+        <section id="recent">
+            <div class="container-fluid recent-section">
+                <!-- Modal -->
+                <!-- <div id="myModal" class="modal fade" role="dialog" data-backdrop="false"> -->
+                <div id="myModal" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-body">
+                        <img class="modal-image" src="large/zb-114.jpg">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                     <div id="portfolio-container">
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-114.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-116.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-117.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-112.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-113.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-101.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-118.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-7.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-5.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-99.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-53.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-54.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-89.jpg">
+                        </span>
+                        <!-- <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-16.jpg">
+                        </span> -->
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-56.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-57.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-21.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-22.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-24.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-23.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-25.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-19.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-20.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-27.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-17.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-18.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-108.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-109.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-110.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-106.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-107.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-36.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-35.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-31.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-30.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-28.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-1.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-4.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-6.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-9.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-10.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-46.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-47.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-48.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-49.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-50.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-51.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-52.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-11.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-12.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-13.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-61.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-55.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-68.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-69.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-66.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-65.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-63.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-38.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-59.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-58.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-8.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-4.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-15.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-64.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-67.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-40.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-41.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-42.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-39.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-88.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-43.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-37.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-90.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-91.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-87.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-73.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-79.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-76.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-80.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-81.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-71.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-72.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-77.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-74.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-78.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-82.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-83.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-84.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-85.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-86.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-96.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-97.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-98.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-103.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-111.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-62.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-92.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-93.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-94.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-95.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-102.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-115.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-104.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-105.jpg">
+                        </span>
+                        <span class="portfolio-image-wrap">
+                            <div id="1">
+                                <a title="MCLAREN P1 Car Photography"></a>
+                            </div>
+                            <img alt="MCLAREN P1 Car Photography" onload="first_load()" class="portfolio-image" src="images/thumbnails/zb-34.jpg">
+                        </span>
+                     </div>
+                </div>
+            </div>
+        </section>
+       
+        <!-- Core Scripts -->
+        
+        <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+        <!-- Plugin Scripts -->
+        <script src="assets/js/plugins/jquery.easing.min.js"></script>
+        <script src="assets/js/plugins/classie.js"></script>
+        <script src="assets/js/plugins/cbpAnimatedHeader.js"></script>
+        <script src="assets/js/plugins/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/plugins/background/core.js"></script>
+        <script src="assets/js/plugins/background/transition.js"></script>
+        <script src="assets/js/plugins/background/background.js"></script>
+        <script src="assets/js/plugins/jquery.mixitup.js"></script>
+        <script src="assets/js/plugins/wow/wow.min.js"></script>
+        <script src="assets/js/plugins/jqBootstrapValidation.js"></script>
+        <!-- Theme Scripts -->
+        <script src="assets/js/nurbrun.js"></script>
+
+        <script type="text/javascript">
+
+        //open modal when sick pick is clicked
+        $('.portfolio-image').click(function(){
+            old_src = this.src
+            old_img = old_src.split('/').pop();
+            modal_src = "images/large/"+ old_img; 
+            $('.modal-image').attr('src',modal_src);
+            $('#myModal').modal('show');
+        })
+
+        //close modal when escape is pressed
+        $(document).keyup(function(e){
+            if(e.keyCode === 27)
+                $('#myModal').modal('hide');
+        });
+
+        </script>
+
+        <!-- ++++++ GOOGLE ANALYTICS ++++++ -->
+        <script>
+          // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          // ga('create', 'UA-64695934-1', 'auto');
+          // ga('send', 'pageview');
+        </script>
+
+        <script type="text/javascript">
+            // Smooth Scrolling: Smooth scrolls to an ID on the current page.
+            // To use this feature, add a link on your page that links to an ID, and add the .page-scroll class to the link itself. See the docs for more details.
+            $('a.page-scroll-big').bind('click', function(event) {
+                var $anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: ($($anchor.attr('href')).offset().top)
+                }, 1250, 'easeInOutExpo');
+                event.preventDefault();
+            });
+            $('a.page-scroll-small').bind('click', function(event) {
+                var $anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: ($($anchor.attr('href')).offset().top-146)
+                }, 1250, 'easeInOutExpo');
+                event.preventDefault();
+            });
+        </script>
+    </body>
+
+</html>
