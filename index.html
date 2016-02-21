@@ -409,11 +409,11 @@
         var fullpagewidth1 = $(window).width();
         var pagewidth1 = fullpagewidth1 - 0;
         var columns5 = pagewidth1 / 5;
-        var columns3 = pagewidth1 / 3;
+        var columns3 = pagewidth1 / 3-1;
         if (pagewidth1 <= 768) {
-            if (pagewidth1 > 320) {
+            if (pagewidth1 > 310) {
                 $('.portfolio-image-wrap, .portfolio-image').css('width', columns3);
-            } else if (pagewidth1 <= 320) {
+            } else if (pagewidth1 <= 310) {
                 $('.portfolio-image-wrap, .portfolio-image').css('width', columns3);
             } else {
                 // do nothing
