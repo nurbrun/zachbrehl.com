@@ -249,6 +249,13 @@
 
     }
 
+    @media (max-width: 321px){
+        header {
+            max-height: 250px !important;
+        }
+
+    }
+
     @media (max-width: 1350px){
         .navbar-right{
             right: 28%;
@@ -407,7 +414,7 @@
             if (pagewidth1 > 320) {
                 $('.portfolio-image-wrap, .portfolio-image').css('width', columns3);
             } else if (pagewidth1 <= 320) {
-                $('.portfolio-image-wrap, .portfolio-image').css('width', '320px');
+                $('.portfolio-image-wrap, .portfolio-image').css('width', columns3);
             } else {
                 // do nothing
             }
