@@ -59,45 +59,45 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 
     // Owl Carousel Settings
-    $(".about-carousel").owlCarousel({
-        items: 3,
-        navigation: true,
-        pagination: false,
-        navigationText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>"
-        ],
-    });
+    // $(".about-carousel").owlCarousel({
+    //     items: 3,
+    //     navigation: true,
+    //     pagination: false,
+    //     navigationText: [
+    //         "<i class='fa fa-angle-left'></i>",
+    //         "<i class='fa fa-angle-right'></i>"
+    //     ],
+    // });
 
-    $(".portfolio-carousel").owlCarousel({
-        singleItem: true,
-        navigation: true,
-        pagination: false,
-        navigationText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>"
-        ],
-        autoHeight: true,
-        mouseDrag: false,
-        touchDrag: false,
-        transitionStyle: "fadeUp"
-    });
+    // $(".portfolio-carousel").owlCarousel({
+    //     singleItem: true,
+    //     navigation: true,
+    //     pagination: false,
+    //     navigationText: [
+    //         "<i class='fa fa-angle-left'></i>",
+    //         "<i class='fa fa-angle-right'></i>"
+    //     ],
+    //     autoHeight: true,
+    //     mouseDrag: false,
+    //     touchDrag: false,
+    //     transitionStyle: "fadeUp"
+    // });
 
-    $(".testimonials-carousel").owlCarousel({
-        singleItem: true,
-        navigation: true,
-        pagination: true,
-        autoHeight: true,
-        navigationText: [
-            "<i class='fa fa-angle-left'></i>",
-            "<i class='fa fa-angle-right'></i>"
-        ],
-        transitionStyle: "backSlide"
-    });
+    // $(".testimonials-carousel").owlCarousel({
+    //     singleItem: true,
+    //     navigation: true,
+    //     pagination: true,
+    //     autoHeight: true,
+    //     navigationText: [
+    //         "<i class='fa fa-angle-left'></i>",
+    //         "<i class='fa fa-angle-right'></i>"
+    //     ],
+    //     transitionStyle: "backSlide"
+    // });
 
-    $(".portfolio-gallery").owlCarousel({
-        items: 3,
-    });
+    // $(".portfolio-gallery").owlCarousel({
+    //     items: 3,
+    // });
 
     // Magnific Popup jQuery Lightbox Gallery Settings
     $('.gallery-link').magnificPopup({
@@ -188,17 +188,17 @@ $(document).ready(function() {
 
 // Analytics Tracking - DEMO ONLY!
 
-(function(i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function() {
-        (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+// (function(i, s, o, g, r, a, m) {
+//     i['GoogleAnalyticsObject'] = r;
+//     i[r] = i[r] || function() {
+//         (i[r].q = i[r].q || []).push(arguments)
+//     }, i[r].l = 1 * new Date();
+//     a = s.createElement(o),
+//         m = s.getElementsByTagName(o)[0];
+//     a.async = 1;
+//     a.src = g;
+//     m.parentNode.insertBefore(a, m)
+// })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-ga('create', 'UA-38417733-23', 'auto');
-ga('send', 'pageview');
+// ga('create', 'UA-38417733-23', 'auto');
+// ga('send', 'pageview');
